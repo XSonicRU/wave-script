@@ -1,4 +1,5 @@
 abstract class module {
+    //Общий класс модуля, от него будут наследоваться все остальные модули
     private static String[] functions;
 
     abstract void process(String s);
