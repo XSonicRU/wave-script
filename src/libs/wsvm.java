@@ -1,4 +1,6 @@
-package libs;//WSVM - WaveScript Virtual Machine - главный исполнительный юнит всего вейвскрипта
+package libs;
+
+//WSVM - WaveScript Virtual Machine - главный исполнительный юнит всего вейвскрипта
 
 import java.util.Vector;
 
