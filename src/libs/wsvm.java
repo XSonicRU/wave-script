@@ -1,8 +1,8 @@
-//WSVM - WaveScript Virtual Machine - главный исполнительный юнит всего вейвскрипта
+package libs;//WSVM - WaveScript Virtual Machine - главный исполнительный юнит всего вейвскрипта
 
 import java.util.Vector;
 
-class wsvm {
+public class wsvm {
     static Vector<String> var;
 
     //Это - хранилище всех переменных.
@@ -10,14 +10,14 @@ class wsvm {
     //Таким образом, каждая переменная занимает в векторе три элемента.
     //Вектор оставлен пустым для дальнейшей иницализации в коде
     //ниже - метод для обработки кода. на вход принимает массив строк.
-    static void make(String[] code) {
+    public static void make(String[] code) {
         for (String a : code) {
 
         }
     }
 
     //Перегрузка метода для интерпретатора
-    static void make(String code) {
+    public static void make(String code) {
         make(new String[]{code});
     }
 }

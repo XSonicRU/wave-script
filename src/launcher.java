@@ -1,5 +1,7 @@
 //интерпретатор кода с консоли
 
+import libs.wsvm;
+
 import java.util.Scanner;
 
 public class launcher {
