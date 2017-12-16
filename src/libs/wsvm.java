@@ -29,9 +29,21 @@ public class wsvm {
             if (!isFound) {
                 exc.thr("E: Не найдено " + a);
             }
-
         }
         //TODO:Усовершенствовать интерпретатор чтоб он понимал больше одной фукнции на строке
+    }
+
+    public static String makefunc(String a) {
+        boolean isFound = false;
+        isFound = false;
+        for (module m : modules) {
+            if (m.check(a)) {
+                isFound = true;
+                return m.process(a, a.substring(a.indexOf('(') + 1, a.lastIndexOf(')')));
+            }
+        }
+        exc.thr("E: Не найдено " + a);
+        return "E";
     }
 
     //Перегрузка метода для интерпретатора
@@ -54,6 +66,12 @@ public class wsvm {
             code[i] = sb.toString();
         }
         return code;
+    }
+
+    //Фукнция, сворачивающая аргументы
+    private static String processarg(String a) {
+        String arg = a.substring(a.indexOf('(') + 1, a.lastIndexOf(')'));
+        return ""; //TODO
     }
 
 }
